@@ -166,7 +166,7 @@ body {
 }
 
 .screenshot {
-  width: 200px; /* Fixed width for each screenshot */
+  width: 180px; /* Fixed width for each screenshot */
   height: auto;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
