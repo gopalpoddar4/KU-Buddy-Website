@@ -96,15 +96,7 @@ body {
     justify-content: center;
   }
   
-  .btn-store img {
-    width: 150px;
-  }
   
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 30px;
-  }
   
   /* Features Section */
   .features {
