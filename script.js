@@ -17,3 +17,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       navbar.classList.remove('sticky');
     }
   });
+
+
+  document.getElementById("download").addEventListener("click",function(e){
+    e.preventDefault();
+    window.location.href = "https://www.instagram.com/gopal_androiddev"
+  })
