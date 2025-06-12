@@ -21,5 +21,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   document.getElementById("download").addEventListener("click",function(e){
     e.preventDefault();
-    window.location.href = "https://www.mediafire.com/file/rnsyohuuqky3qa1/KU_Buddy.apk/file"
+    window.location.href = "https://www.mediafire.com/file/zs41bmrde3d7nlp/app-release.apk/file"
   })
