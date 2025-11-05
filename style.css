@@ -9,6 +9,7 @@
   --muted:#4B4B4B;
   --radius:12px;
   --container:1100px;
+  --text:#111; /* added for social button text */
 }
 
 /* Base reset */
@@ -16,7 +17,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family: "Poppins", "Inter", Arial, sans-serif;
+  font-family:"Poppins","Inter",Arial,sans-serif;
   background:var(--bg);
   color:var(--muted);
   -webkit-font-smoothing:antialiased;
@@ -52,12 +53,17 @@ body{
 .hero-phone{width:220px;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,0.08);}
 
 /* Buttons */
-.btn-primary, .btn-secondary{
+.btn-primary,.btn-secondary{
   display:inline-block;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:700;
 }
-.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 12px 30px rgba(46,125,50,0.12)}
-.btn-primary:hover{transform:translateY(-4px);transition:all .18s ease}
-.btn-secondary{background:#fff;color:var(--accent-2);border:1px solid rgba(0,0,0,0.04);}
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#fff;
+  box-shadow:0 12px 30px rgba(46,125,50,0.12);
+  transition:all .18s ease;
+}
+.btn-primary:hover{transform:translateY(-4px)}
+.btn-secondary{background:#fff;color:var(--accent-2);border:1px solid rgba(0,0,0,0.04)}
 
 /* FEATURES */
 .features{padding:36px 0}
@@ -78,33 +84,35 @@ body{
 .download-section{padding:28px 0;text-align:center}
 .download-section .lead{max-width:820px;margin:10px auto 18px;color:var(--muted)}
 
-/* Social buttons styled like the Download button */
+/* CONTACT / SOCIAL */
 .socials{
   display:flex;
-  gap:12px;
+  flex-wrap:wrap;
   justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
-  margin-top:18px;
+  gap:14px;
+  margin-top:20px;
 }
 
-/* Pill-style social button */
 .btn-social{
   display:inline-flex;
   align-items:center;
   gap:10px;
   text-decoration:none;
-  padding:12px 18px;
+  padding:12px 20px;
   border-radius:999px;
   font-weight:700;
-  color:#111;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  box-shadow: 0 12px 30px rgba(255,173,0,0.12);
-  transition: transform .16s ease, box-shadow .16s ease;
-  border: none;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#fff;
+  box-shadow:0 10px 26px rgba(46,125,50,0.12);
+  transition:transform .18s ease, box-shadow .18s ease;
 }
 
-/* Small tag on left (short platform label) */
+.btn-social:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(46,125,50,0.16);
+}
+
 .btn-social .social-tag{
   display:inline-flex;
   align-items:center;
@@ -112,35 +120,28 @@ body{
   min-width:36px;
   height:36px;
   border-radius:999px;
-  background: rgba(255,255,255,0.9);
-  color: var(--text);
+  background:#fff;
+  color:var(--accent-2);
   font-weight:800;
   font-size:0.92rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* Full username / email text */
 .btn-social .social-text{
-  color:#111;
+  color:#fff;
   font-size:0.95rem;
   white-space:nowrap;
 }
 
-/* Hover / active */
-.btn-social:hover{
-  transform:translateY(-4px);
-  box-shadow: 0 20px 50px rgba(255,173,0,0.16);
+.btn-social:focus{
+  outline:3px solid rgba(46,125,50,0.25);
+  outline-offset:4px;
 }
 
-/* When background is dark (if any), ensure contrast */
-.btn-social:focus{outline: 3px solid rgba(255,173,0,0.18); outline-offset:4px}
-
-/* Responsive: smaller buttons on narrow screens */
-@media (max-width:480px){
-  .btn-social{padding:10px 12px; font-size:0.92rem}
-  .btn-social .social-text{display:none} /* keep compact: only show tag on very small screens */
+/* Small screen */
+@media(max-width:480px){
+  .btn-social{padding:10px 14px;font-size:0.9rem}
+  .btn-social .social-text{display:none}
 }
-
 
 /* Modal */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.72);z-index:2000;padding:18px}
@@ -152,14 +153,14 @@ body{
 .site-footer{padding:24px 0;text-align:center;color:var(--muted);font-size:0.95rem}
 
 /* Responsive */
-@media (max-width:900px){
+@media(max-width:900px){
   .hero-inner{flex-direction:column-reverse;text-align:center}
   .hero-visual{width:160px}
   .menu-toggle{display:block}
   .nav-list{display:none;position:absolute;right:20px;top:68px;background:var(--card);color:var(--muted);padding:12px;border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,0.08)}
   .nav-list.show{display:flex;flex-direction:column;gap:10px}
 }
-@media (max-width:480px){
+@media(max-width:480px){
   .hero-text h1{font-size:1.4rem}
   .screenshot{width:160px}
   .logo-img{width:40px;height:40px}
