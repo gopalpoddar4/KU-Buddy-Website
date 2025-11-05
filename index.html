@@ -1,111 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KU Buddy - Your Ultimate Kolhan University Guide">
-  <title>KU Buddy - Kolhan University App</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KU Buddy — Kolhan University Guide</title>
+
+  <!-- SEO meta -->
+  <meta name="description" content="KU Buddy — Your Kolhan University app for syllabus, notes, exam schedules, and campus updates. Built by Gopal Poddar." />
+  <meta name="keywords" content="KU Buddy, Kolhan University app, syllabus, notes, exam schedule, Gopal Poddar, student app" />
+  <meta name="author" content="Gopal Poddar" />
+  <link rel="canonical" href="https://gopalpoddar4.github.io/KU-Buddy-Website/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="KU Buddy — Kolhan University Guide" />
+  <meta property="og:description" content="Stay updated with syllabus, notes and exam schedules for Kolhan University. KU Buddy by Gopal Poddar." />
+  <meta property="og:image" content="https://gopalpoddar4.github.io/KU-Buddy-Website/ScreenShot/home.jpg" />
+  <meta property="og:url" content="https://gopalpoddar4.github.io/KU-Buddy-Website/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KU Buddy — Kolhan University Guide" />
+  <meta name="twitter:description" content="Syllabus, notes, schedules & university updates — all in one app." />
+  <meta name="twitter:image" content="https://gopalpoddar4.github.io/KU-Buddy-Website/ScreenShot/home.jpg" />
+
+  <!-- favicon (optional) -->
+  <link rel="icon" href="image/kubuddylogo.png" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KU Buddy",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "EducationApplication",
+    "url": "https://gopalpoddar4.github.io/KU-Buddy-Website/",
+    "author": {"@type":"Person","name":"Gopal Poddar"},
+    "description": "KU Buddy — an app for Kolhan University students to access syllabus, notes, exam schedules and campus updates.",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"}
+  }
+  </script>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo-container">
-        <a href="#" class="logo">
-          <img src="image/kubuddylogo.png" alt="KU Buddy Logo"> <!-- Replace with your logo -->
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <a href="#" class="logo-link">
+          <img src="image/kubuddylogo.png" alt="KU Buddy Logo" class="logo-img">
         </a>
-        <span class="logo-text">KU Buddy</span> <!-- Text next to the logo -->
+        <span class="brand-text">KU Buddy</span>
       </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#screenshots">Screenshots</a></li>
-        <li><a href="#download">Download</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
   <section id="home" class="hero">
-    <div class="container">
+    <div class="container hero-inner">
       <div class="hero-text">
-        <h1>Your Ultimate Kolhan University Guide!</h1>
-        <p>Stay updated with syllabus, notes, and university news in one app.</p>
-        <a href="#download" class="btn-get-started">Download</a>
+        <h1>KU Buddy</h1>
+        <p class="subtitle">Your Ultimate Kolhan University Guide — Syllabus, Notes, Exam Schedules & Campus Updates.</p>
+        <a id="ctaDownload" class="btn-primary" href="https://www.mediafire.com/file/tmlwf35td9a3j6u/KU_Buddy_%2528V2.0%2529.apk/file" target="_blank" rel="noopener" data-apk="https://www.mediafire.com/file/tmlwf35td9a3j6u/KU_Buddy_%2528V2.0%2529.apk/file">Download KU Buddy (APK)</a>
+      </div>
+      <div class="hero-visual">
+        <img src="ScreenShot/home.jpg" alt="KU Buddy app preview" class="hero-phone">
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- FEATURES -->
   <section id="features" class="features">
     <div class="container">
       <h2>Features</h2>
       <div class="feature-grid">
-        <div class="feature-item">
-          <i class="fas fa-book"></i>
+        <article class="feature-item">
+          <i class="fa-solid fa-book"></i>
           <h3>Syllabus & Notes</h3>
-          <p>Access all your syllabus and notes in one place.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-bullhorn"></i>
-          <h3>Latest University Updates</h3>
-          <p>Stay informed with real-time university news.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-calendar-alt"></i>
+          <p>Centralized access to course syllabus and study notes tailored for Kolhan University.</p>
+        </article>
+
+        <article class="feature-item">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h3>University Updates</h3>
+          <p>Official notices and news delivered in-app so you never miss announcements.</p>
+        </article>
+
+        <article class="feature-item">
+          <i class="fa-solid fa-calendar-days"></i>
           <h3>Exam Schedules</h3>
-          <p>Never miss an exam with timely reminders.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-graduation-cap"></i>
+          <p>Timely exam schedules with reminders and calendar integration.</p>
+        </article>
+
+        <article class="feature-item">
+          <i class="fa-solid fa-graduation-cap"></i>
           <h3>Study Resources</h3>
-          <p>Get access to curated study materials.</p>
+          <p>Curated notes, PDFs and helpful links for easy studying.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section id="screenshots" class="screenshots">
+    <div class="container">
+      <h2>App Preview</h2>
+      <div class="screenshot-container" aria-label="KU Buddy screenshots">
+        <div class="screenshot-grid">
+          <img src="ScreenShot/home.jpg" alt="KU Buddy Home" class="screenshot" tabindex="0">
+          <img src="ScreenShot/syllabus.jpg" alt="Syllabus" class="screenshot" tabindex="0">
+          <img src="ScreenShot/pdf.jpg" alt="PDF Viewer" class="screenshot" tabindex="0">
+          <img src="ScreenShot/ai.jpg" alt="AI Feature" class="screenshot" tabindex="0">
+          <img src="ScreenShot/contact.jpg" alt="Contact" class="screenshot" tabindex="0">
         </div>
       </div>
     </div>
   </section>
 
-  <section id="screenshots"class="screenshots">
-    <h2>App Preview</h2>
-    <div class="screenshot-container">
-        <div class="screenshot-grid"> 
-            <img src="ScreenShot/home.jpg" alt="KU Buddy App Screenshot 1" class="screenshot">
-            <img src="ScreenShot/syllabus.jpg" alt="KU Buddy App Screenshot 2" class="screenshot"> 
-            <img src="ScreenShot/pdf.jpg" alt="KU Buddy App Screenshot 3" class="screenshot">
-            <img src="ScreenShot/ai.jpg" alt="KU Buddy App Screenshot 4" class="screenshot">
-            <img src="ScreenShot/contact.jpg" alt="KU Buddy App Screenshot 5" class="screenshot"> 
-        </div>
-    </div>
-</section>
-  <!-- Why Choose KU Buddy? -->
-  <section id="download"class="cta">
+  <!-- DOWNLOAD / CTA -->
+  <section id="download" class="download-section">
     <div class="container">
       <h2>Why Choose KU Buddy?</h2>
-      <p>KU Buddy is your all-in-one solution for staying connected with Kolhan University. From syllabus updates to exam schedules, we've got you covered.</p>
-      <a href="#download" class="btn-get-started">Download</a>
+      <p class="lead">KU Buddy brings all university resources into one place — organized, fast and student-friendly.</p>
+      <a class="btn-secondary" href="https://www.mediafire.com/file/tmlwf35td9a3j6u/KU_Buddy_%2528V2.0%2529.apk/file" target="_blank" rel="noopener">Download APK</a>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Contact Us</h2>
-      <div class="social-links"> 
-        <a href="https://www.x.com/Gopal_Poddar4" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/gopal_androiddev" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/gopalpoddar4" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:kubuddy.contact@gmail.com"><i class="fas fa-envelope"></i></a>
+      <h2>Contact & Support</h2>
+      <p class="lead">Questions or suggestions? Reach out.</p>
+      <div class="socials">
+        <a href="https://x.com/gopalpoddar0" target="_blank" rel="noopener" aria-label="X"><img src="image/x-icon.png" alt="X" class="social-icon"></a>
+        <a href="https://www.instagram.com/gopalpoddar0" target="_blank" rel="noopener" aria-label="Instagram"><img src="image/instagram-icon.png" alt="Instagram" class="social-icon"></a>
+        <a href="https://www.linkedin.com/in/gopalpoddar4" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="image/linkedin-icon.png" alt="LinkedIn" class="social-icon"></a>
+        <a href="mailto:kubuddy.contact@gmail.com" aria-label="Email"><img src="image/mail-icon.png" alt="Mail" class="social-icon"></a>
       </div>
     </div>
   </section>
 
-  <footer>
+  <!-- Modal preview -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <img class="modal-image" src="" alt="Screenshot preview">
+  </div>
+
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 KU Buddy. All rights reserved.</p>
+      <p>© 2025 KU Buddy — Built by <strong>Gopal Poddar</strong></p>
     </div>
   </footer>
+
+  <!-- Font Awesome (local fallback if you prefer local icons replace img icons above) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
 
   <script src="script.js"></script>
 </body>
